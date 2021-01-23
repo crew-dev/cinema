@@ -201,6 +201,12 @@ input::placeholder {
   padding-top: 80px;
 }
 
+.film-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .film-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
