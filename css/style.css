@@ -810,11 +810,38 @@ input::placeholder {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background: #ffffff;
+}
+
+#preloader.hide-preloader {
+  -webkit-animation: hidePreloader 1s;
+  animation: hidePreloader 1s;
+}
+
+#preloader.preloader-hidden {
+  display: none;
+}
+
+@-webkit-keyframes hidePreloader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hidePreloader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
