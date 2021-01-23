@@ -192,10 +192,10 @@ input::placeholder {
 
 .trailer-button {
 	background-color: #fff;
-	border: 1px solid $border-color;
+	border: 1px solid rgba(165, 165, 165, 0.4);
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
-	width: 366px;
+	width: 355px;
 	height: 75px;
 	background: var(--body-background);
 	color: #5671f6;
