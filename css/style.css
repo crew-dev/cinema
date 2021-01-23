@@ -83,7 +83,7 @@ input {
   outline: none;
   vertical-align: middle;
   border: 0px;
-  background-image: url(img/search-icon.svg);
+  background-image: url(../img/search-icon.svg);
   background-repeat: no-repeat;
   background-position: center left 0px;
   color: var(--search-input-color);
@@ -235,7 +235,7 @@ input::placeholder {
           align-items: center;
   cursor: pointer;
   outline: none;
-  background-image: url(img/watch.svg);
+  background-image: url(../img/watch.svg);
   background-repeat: no-repeat;
   background-position: 60px;
   font-size: 16px;
@@ -248,7 +248,7 @@ input::placeholder {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: #5671f6;
-  background-image: url(img/watch-hover.svg);
+  background-image: url(../img/watch-hover.svg);
   color: #fff;
 }
 
@@ -443,7 +443,7 @@ input::placeholder {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
-  background-image: url(img/like.svg);
+  background-image: url(../img/like.svg);
   background-position: 7px;
   background-repeat: no-repeat;
   -webkit-transition: ease-in-out .3s;
@@ -453,7 +453,7 @@ input::placeholder {
 
 .film-button-like:hover {
   background-color: #2ebb353b;
-  background-image: url(img/like-2.svg);
+  background-image: url(../img/like-2.svg);
   color: var(--text-color);
 }
 
@@ -472,7 +472,7 @@ input::placeholder {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
-  background-image: url(img/dislike.svg);
+  background-image: url(../img/dislike.svg);
   background-position: 7px;
   background-repeat: no-repeat;
   -webkit-transition: ease-in-out .3s;
@@ -481,7 +481,7 @@ input::placeholder {
 
 .film-button-dislike:hover {
   background-color: #f656563f;
-  background-image: url(img/dislike-hover.svg);
+  background-image: url(../img/dislike-hover.svg);
   color: var(--text-color);
 }
 
@@ -777,7 +777,7 @@ input::placeholder {
           align-items: center;
   cursor: pointer;
   outline: none;
-  background-image: url(img/watch.svg);
+  background-image: url(../img/watch.svg);
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: 20px;
@@ -792,7 +792,7 @@ input::placeholder {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: #5671f6;
-  background-image: url(img/watch-hover.svg);
+  background-image: url(../img/watch-hover.svg);
   color: #fff;
 }
 
@@ -817,3 +817,4 @@ input::placeholder {
           justify-content: center;
   background: #ffffff;
 }
+/*# sourceMappingURL=style.css.map */
