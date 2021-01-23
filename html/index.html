@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema+ | Онлайн кинотеатр</title>
+  </head>
+
+  <body>
+<style>body{opacity:0;overflow:hidden}html{background-color:#fff}</style>
+<div id='preloader'>
+    <img src="/img/preloader.svg" alt="preloader">
+</div>
+  </div>
+		</div>
+    <header class="header">
+      <div class="header-logo">
+        <a href="#"><img src="/img/logo.svg" alt="logo.svg" /></a>
+      </div>
+      <div class="search-input">
+        <input
+          id="search"
+          type="text"
+          placeholder="Поиск по фильмам..."
+          class="input"
+        />
+      </div>
+      <div class="header-nav">
+        <nav class="nav">
+          <a class="nav-link" href="#">Фильмы</a>
+          <a class="nav-link" href="#">Сериалы</a>
+          <a class="nav-link" href="#">Лучшее</a>
+          <a class="nav-link" href="#">Рецензии</a>
+          <i class="bx bx-moon change-theme" id="theme-button"></i>
+        </nav>
+      </div>
+      <div class="btn-group">
+        <div class="sign-up">
+          <span>Регистрация</span>
+        </div>
+        <div class="login">
+          <span>Войти</span>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="film">
+        <div class="film-wrapper">
+          <div class="film-trailer">
+            <picture>
+              <source srcset="/img/webp/poster.webp" type="image/webp" />
+              <img src="/img/poster.png" alt="poster" />
+            </picture>
+            <a
+              class="trailer-button"
+              data-fancybox
+              href="https://www.youtube.com/watch?v=0k82-pGgryk"
+            >
+              <span class="trailer-button-text">Посмотреть трейлер</span>
+            </a>
+          </div>
+          <div class="film-text">
+            <div class="film-title">
+              Черная Вдова
+              <div class="button-imax">IMAX</div>
+            </div>
+
+            <div class="film-subtitle">
+              Black Widow
+              <div class="button-age">16+</div>
+            </div>
+            <div class="film-description">
+              Наташе Романофф предстоит лицом к лицу встретиться со своим
+              прошлым. Чёрной Вдове придется вспомнить о том, что было в её
+              жизни задолго до присоединения к команде Мстителей, и узнать об
+              опасном заговоре, в который оказываются втянуты её старые знакомые
+              - Елена, Алексей, также известный как Красный Страж, и Мелина.
+            </div>
+            <div class="about-film">
+              <div class="left-side">
+                <span class="about-text">
+                  <strong class="about-text-bold">Режиссер</strong>
+                  <span class="about-text-reg">Джейсон Райтман</span>
+                </span>
+                <span class="about-text">
+                  <strong class="about-text-bold">Сценарий</strong>
+                  <span class="about-text-reg">Дэн Эйкройд</span>
+                </span>
+                <span class="about-text">
+                  <strong class="about-text-bold">Премьера</strong>
+                  <span class="about-text-reg">6 мая 2021 (РФ)</span>
+                </span>
+                <span class="about-text">
+                  <strong class="about-text-bold">Страна</strong>
+                  <span class="about-text-reg">США</span>
+                </span>
+                <span class="about-text">
+                  <strong class="about-text-bold">Жанр</strong>
+                  <span class="about-text-reg"
+                    >фантастика, боевик, <br />
+                    приключения</span
+                  >
+                </span>
+              </div>
+              <div class="right-side">
+                <span class="about-text">
+                  <strong class="about-text-bold">Год проката</strong>
+                  <span class="about-text-reg">2021</span>
+                </span>
+                <span class="about-text">
+                  <strong class="about-text-bold">Кинопрокат</strong>
+                  <span class="about-text-reg">WDSSPR</span>
+                </span>
+                <span class="about-text">
+                  <strong class="about-text-bold">Премьера</strong>
+                  <span class="about-text-reg">29 апреля 2021</span>
+                </span>
+                <span class="about-text">
+                  <strong class="about-text-bold">Бюджет</strong>
+                  <span class="about-text-reg">—</span>
+                </span>
+                <span class="about-text">
+                  <strong class="about-text-bold">Время</strong>
+                  <span class="about-text-reg">—</span>
+                </span>
+              </div>
+            </div>
+            <div class="film-rating">
+              <div class="film-rating-counter">95%</div>
+              <div class="film-group">
+                <div class="film-rating-title">
+                  Рейтинг ожидания <br />
+                  кинопремьеры
+                </div>
+                <div class="film-button">
+                  <a class="film-button-like"
+                    ><span class="button-like-text">Жду</span></a
+                  >
+                  <a class="film-button-dislike"
+                    ><span class="button-dislike-text">Не жду</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="watch-film">
+      <div class="container">
+        <div class="main-title">Смотреть фильм</div>
+        <div class="video-player">
+          <video
+            id="player"
+            playsinline
+            controls
+            data-poster="/video/poster/poster-film.jpg"
+          >
+            <source src="/video/black-widow.mp4" type="video/mp4" />
+            <source src="/video/black-widow.webm" type="video/webm" />
+          </video>
+          <div class="watch-film-rating">
+            <div class="rating-users">
+              <div class="watch-film-subtitle">
+                Посмотрели? <br />
+                Оцените фильм
+              </div>
+              <div class="film-stars">
+                <img src="/img/star.svg" alt="" class="star" />
+                <img src="/img/star.svg" alt="" class="star" />
+                <img src="/img/star.svg" alt="" class="star" />
+                <img src="/img/star.svg" alt="" class="star" />
+                <img src="/img/star.svg" alt="" class="star" />
+                <img src="/img/star.svg" alt="" class="star" />
+                <img src="/img/star.svg" alt="" class="star" />
+                <img src="/img/star-default.svg" alt="" class="star" />
+                <img src="/img/star-default.svg" alt="" class="star" />
+                <img src="/img/star-default.svg" alt="" class="star" />
+              </div>
+              <div class="watch-users">
+                <div class="film-rating-counter">7.0</div>
+                <div class="watch-film-btn">Пользователи</div>
+              </div>
+            </div>
+            <div class="rating-critics">
+              <div class="rating-imdb">
+                <div class="film-rating-counter">7.2</div>
+                <div class="watch-film-btn">IMDB</div>
+              </div>
+              <div class="rating-metacritic">
+                <div class="film-rating-counter">6.8</div>
+                <div class="watch-film-btn">Metacritic</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="actors">
+      <div class="container">
+        <div class="tabs">
+          <div class="tabs__nav tabs-nav">
+            <div class="tabs-nav__item is-active" data-tab-name="tab-1">
+              Актеры
+            </div>
+            <div class="tabs-nav__item" data-tab-name="tab-2">Создатели</div>
+          </div>
+          <div class="tabs__content">
+            <div class="tab is-active tab-1">
+              <div class="items-actors">
+                <div class="actor-card">
+                  <picture>
+                    <source srcset="/img/webp/actor-1.webp" type="image/webp" />
+                    <img src="/img/actor-1.png" alt="actor" />
+                  </picture>
+                  <div class="actor-info">
+                    <div class="actor-title">Скарлетт Йоханссон</div>
+                    <div class="actor-subtitle">Scarlett Johansson</div>
+                  </div>
+                </div>
+                <div class="actor-card">
+                  <picture>
+                    <source srcset="/img/webp/actor-2.webp" type="image/webp" />
+                    <img src="/img/actor-2.png" alt="actor" />
+                  </picture>
+                  <div class="actor-info">
+                    <div class="actor-title">Флоренс Пью</div>
+                    <div class="actor-subtitle">Florence Pugh</div>
+                  </div>
+                </div>
+                <div class="actor-card">
+                  <picture>
+                    <source srcset="/img/webp/actor-3.webp" type="image/webp" />
+                    <img src="/img/actor-3.png" alt="actor" />
+                  </picture>
+                  <div class="actor-info">
+                    <div class="actor-title">Рэйчел Вайс</div>
+                    <div class="actor-subtitle">Rachel Weisz</div>
+                  </div>
+                </div>
+                <div class="actor-card">
+                  <picture>
+                    <source srcset="/img/webp/actor-4.webp" type="image/webp" />
+                    <img src="/img/actor-4.png" alt="actor" />
+                  </picture>
+                  <div class="actor-info">
+                    <div class="actor-title">Мэриэн Лоренчик</div>
+                    <div class="actor-subtitle">Marian Lorencik</div>
+                  </div>
+                </div>
+                <div class="actor-card">
+                  <picture>
+                    <source srcset="/img/webp/actor-5.webp" type="image/webp" />
+                    <img src="/img/actor-5.png" alt="actor" />
+                  </picture>
+                  <div class="actor-info">
+                    <div class="actor-title">Иоланда Лайнс</div>
+                    <div class="actor-subtitle">Yolanda Lynes</div>
+                  </div>
+                </div>
+                <div class="actor-card">
+                  <picture>
+                    <source srcset="/img/webp/actor-6.webp" type="image/webp" />
+                    <img src="/img/actor-6.png" alt="actor" />
+                  </picture>
+                  <div class="actor-info">
+                    <div class="actor-title">Рэй Уинстон</div>
+                    <div class="actor-subtitle">Ray Winstone</div>
+                  </div>
+                </div>
+                <div class="actor-card">
+                  <picture>
+                    <source srcset="/img/webp/actor-7.webp" type="image/webp" />
+                    <img src="/img/actor-7.png" alt="actor" />
+                  </picture>
+                  <div class="actor-info">
+                    <div class="actor-title">Уильям Херт</div>
+                    <div class="actor-subtitle">William Hurt</div>
+                  </div>
+                </div>
+                <div class="actor-card">
+                  <picture>
+                    <source srcset="/img/webp/actor-8.webp" type="image/webp" />
+                    <img src="/img/actor-8.png" alt="actor" />
+                  </picture>
+                  <div class="actor-info">
+                    <div class="actor-title">Адам Прикет</div>
+                    <div class="actor-subtitle">Adam Prickett</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab tab-2">
+            <div class="items-actors">
+              <div class="actor-card">
+                <picture>
+                  <source
+                    srcset="/img/webp/producer-1.webp"
+                    type="image/webp"
+                  />
+                  <img src="/img/producer-1.png" alt="producer" />
+                </picture>
+                <div class="actor-info">
+                  <div class="actor-title">Закария Алауи</div>
+                  <div class="actor-subtitle">Zakaria Alaoui</div>
+                </div>
+              </div>
+              <div class="actor-card">
+                <picture>
+                  <source
+                    srcset="/img/webp/producer-2.webp"
+                    type="image/webp"
+                  />
+                  <img src="/img/producer-2.png" alt="producer" />
+                </picture>
+                <div class="actor-info">
+                  <div class="actor-title">Виктория Алонсо</div>
+                  <div class="actor-subtitle">Victoria Alonso</div>
+                </div>
+              </div>
+              <div class="actor-card">
+                <picture>
+                  <source
+                    srcset="/img/webp/producer-3.webp"
+                    type="image/webp"
+                  />
+                  <img src="/img/producer-3.png" alt="producer" />
+                </picture>
+                <div class="actor-info">
+                  <div class="actor-title">Митчелл Белл</div>
+                  <div class="actor-subtitle">Mitchell Bell</div>
+                </div>
+              </div>
+              <div class="actor-card">
+                <picture>
+                  <source
+                    srcset="/img/webp/producer-4.webp"
+                    type="image/webp"
+                  />
+                  <img src="/img/producer-4.png" alt="producer" />
+                </picture>
+                <div class="actor-info">
+                  <div class="actor-title">Пер Генри Борх</div>
+                  <div class="actor-subtitle">Per Henry Borch</div>
+                </div>
+              </div>
+              <div class="actor-card">
+                <picture>
+                  <source
+                    srcset="/img/webp/producer-5.webp"
+                    type="image/webp"
+                  />
+                  <img src="/img/producer-5.png" alt="producer" />
+                </picture>
+                <div class="actor-info">
+                  <div class="actor-title">Луис Д’Эспозито</div>
+                  <div class="actor-subtitle">Louis D'Esposito</div>
+                </div>
+              </div>
+              <div class="actor-card">
+                <picture>
+                  <source
+                    srcset="/img/webp/producer-6.webp"
+                    type="image/webp"
+                  />
+                  <img src="/img/producer-6.png" alt="producer" />
+                </picture>
+                <div class="actor-info">
+                  <div class="actor-title">Кевин Файги</div>
+                  <div class="actor-subtitle">Kevin Feige</div>
+                </div>
+              </div>
+              <div class="actor-card">
+                <picture>
+                  <source
+                    srcset="/img/webp/producer-7.webp"
+                    type="image/webp"
+                  />
+                  <img src="/img/producer-7.png" alt="producer" />
+                </picture>
+                <div class="actor-info">
+                  <div class="actor-title">Брэд Виндербаум</div>
+                  <div class="actor-subtitle">Brad Winderbaum</div>
+                </div>
+              </div>
+              <div class="actor-card">
+                <picture>
+                  <source
+                    srcset="/img/webp/producer-8.webp"
+                    type="image/webp"
+                  />
+                  <img src="/img/producer-8.png" alt="producer" />
+                </picture>
+                <div class="actor-info">
+                  <div class="actor-title">Скарлетт Йоханссон</div>
+                  <div class="actor-subtitle">Scarlett Johansson</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="film-recommend">
+      <div class="container">
+        <div class="main-title recommend">Рекомендуем посмотреть</div>
+        <div class="films-items">
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="film-item">
+                  <div class="film-item-title">Довод</div>
+                  <div class="film-item-subtitle">
+                    Tenet
+                    <div class="film-item-btn-age">16+</div>
+                  </div>
+                  <div class="film-item-image">
+                      <img class="image-film-item" src="/img/film-item-1.png" alt="producer" />
+                  </div>
+                  <a
+                    class="film-item-btn"
+                    data-fancybox
+                    href="https://www.youtube.com/watch?v=C6dZA-buNCw"
+                    >Посмотреть трейлер</a
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="film-item">
+                  <div class="film-item-title">
+                    Человек-паук: Возвращение домой
+                  </div>
+                  <div class="film-item-subtitle">
+                    Spider-Man: Homecoming
+                    <div class="film-item-btn-age">16+</div>
+                  </div>
+                  <div class="film-item-image">
+                      <img class="image-film-item" src="/img/film-item-2.png" alt="producer" />
+                  </div>
+                  <a
+                    class="film-item-btn"
+                    data-fancybox
+                    href="https://www.youtube.com/watch?v=LiHypZWN6HY"
+                    >Посмотреть трейлер</a
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="film-item">
+                  <div class="film-item-title">Зов предков</div>
+                  <div class="film-item-subtitle">
+                    The Call of the Wild
+                    <div class="film-item-btn-age">6+</div>
+                  </div>
+                  <div class="film-item-image">
+                      <img class="image-film-item" src="/img/film-item-3.png" alt="producer" />
+                  </div>
+                  <a
+                    class="film-item-btn"
+                    data-fancybox
+                    href="https://www.youtube.com/watch?v=IYdka8APxVs"
+                    >Посмотреть трейлер</a
+                  >
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="film-item">
+                  <div class="film-item-title">Огонь</div>
+                  <div class="film-item-subtitle">
+                    Flame
+                    <div class="film-item-btn-age">6+</div>
+                  </div>
+                  <div class="film-item-image">
+                      <img class="image-film-item" src="/img/film-item-4.png" alt="producer" />
+                  </div>
+                  <a
+                    class="film-item-btn"
+                    data-fancybox
+                    href="https://www.youtube.com/watch?v=CAVdJB1qj9E"
+                    >Посмотреть трейлер</a
+                  >
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="film-item">
+                  <div class="film-item-title">
+                    Последний богатырь: Корень зла
+                  </div>
+                  <div class="film-item-subtitle">
+                    The Last Hero: The Root of Evil
+                    <div class="film-item-btn-age">6+</div>
+                  </div>
+                  <div class="film-item-image">
+                      <img class="image-film-item" src="/img/film-item-5.png" alt="producer" />
+                  </div>
+                  <a
+                    class="film-item-btn"
+                    data-fancybox
+                    href="https://www.youtube.com/watch?v=OeC2tF4KgkA"
+                    >Посмотреть трейлер</a
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="film-item">
+                  <div class="film-item-title">Гренладния</div>
+                  <div class="film-item-subtitle">
+                    Greenland
+                    <div class="film-item-btn-age">16+</div>
+                  </div>
+                  <div class="film-item-image">
+                      <img class="image-film-item" src="/img/film-item-6.png" alt="producer" />
+                    </picture>
+                  </div>
+                  <a
+                    class="film-item-btn"
+                    data-fancybox
+                    href="https://www.youtube.com/watch?v=C6dZA-buNCw"
+                    >Посмотреть трейлер</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- <div class="wpulike-notification">
+		<div class="wpulike-message wpulike-success">Вы ожидайте данный фильм!</div>
+		<div class="wpulike-message wpulike-error">Вы не ожидайте данный фильм!</div>
+	</div> -->
+
+		<!-- style -->
+		<link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/plyr.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.css" />
+    <link rel="stylesheet" href="/css/jquery.fancybox.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet"/>
+	  <!-- script -->
+    <script src="/js/jquery-3.5.1.min.js"></script>
+		<script src="/js/main.js"></script>
+		<script src="/js/video.js"></script>
+    <script src="/js/swiper-bundle.js"></script>
+    <script src="/js/swiper.js"></script>
+    <script src="/js/tabs.js"></script>
+    <script src="/js/jquery.fancybox.min.js"></script>
+  </body>
+</html>
