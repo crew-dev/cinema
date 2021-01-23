@@ -679,7 +679,7 @@ input::placeholder {
   align-items: center;
   cursor: pointer;
   outline: none;
-  background-image: url(img/watch.svg);
+  background-image: url(/img/watch.svg);
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: 20px;
@@ -693,7 +693,7 @@ input::placeholder {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: #5671f6;
-  background-image: url(img/watch-hover.svg);
+  background-image: url(/img/watch-hover.svg);
   color: #fff;
 }
 
